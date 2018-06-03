@@ -1,0 +1,6 @@
+*.classpath
+*.DS_STORE
+*.project
+target/
+.settings/
+*desktop.ini
