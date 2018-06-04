@@ -22,5 +22,11 @@ public class CurrencyConversionServiceApplication {
 	public Sampler defaultSampler() {
 		return Sampler.ALWAYS_SAMPLE;
 	}
+	
+	public void testFour() {
+		
+		System.out.println("********");
+	}
+
 
 }
