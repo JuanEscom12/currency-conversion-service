@@ -10,6 +10,8 @@ public class CurrencyConversionBean {
 	private BigDecimal quantity;
 	private BigDecimal totalCalculatedAmount;
 	private int port;
+	private int testOne;
+	private int testTwo;
 
 	public CurrencyConversionBean() {
 
@@ -83,4 +85,21 @@ public class CurrencyConversionBean {
 		this.port = port;
 	}
 
+	public int getTestOne() {
+		return testOne;
+	}
+
+	public void setTestOne(int testOne) {
+		this.testOne = testOne;
+	}
+
+	public int getTestTwo() {
+		return testTwo;
+	}
+
+	public void setTestTwo(int testTwo) {
+		this.testTwo = testTwo;
+	}
+	
+	
 }
