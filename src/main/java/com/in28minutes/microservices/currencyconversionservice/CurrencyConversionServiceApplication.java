@@ -23,8 +23,14 @@ public class CurrencyConversionServiceApplication {
 		return Sampler.ALWAYS_SAMPLE;
 	}
 	
+	public void testFour() {
+		
+		System.out.println("********");
+	}
+
 	public void testOne() {
 		System.out.println("********");
 	}
+
 
 }
