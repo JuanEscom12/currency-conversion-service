@@ -33,7 +33,7 @@ public class CurrencyConversionController {
 		ResponseEntity<CurrencyConversionBean> responseEntity = new RestTemplate().getForEntity(
 				"http://localhost:8000/currency-exchange/from/{from}/to/{to}", CurrencyConversionBean.class,
 				uriVariables);
-
+		
 		CurrencyConversionBean response = responseEntity.getBody();
 
 		return new CurrencyConversionBean(response.getId(), from, to, response.getConversionMultiple(), quantity,
@@ -51,5 +51,28 @@ public class CurrencyConversionController {
 		return new CurrencyConversionBean(response.getId(), from, to, response.getConversionMultiple(), quantity,
 				quantity.multiply(response.getConversionMultiple()), response.getPort());
 	}
+	
+	public CurrencyConversionBean testTree(@PathVariable String from, @PathVariable String to,
+			@PathVariable BigDecimal quantity) {
 
+		CurrencyConversionBean responIIse = proxy.retrieveExchangeValue(from, to);
+
+		
+		logger.info("{}", responIIse);
+		
+		return new CurrencyConversionBean(responIIse.getId(), from, to, responIIse.getConversionMultiple(), quantity,
+				quantity.multiply(responIIse.getConversionMultiple()), responIIse.getPort());
+	}
+
+	public CurrencyConversionBean testOne(@PathVariable String from, @PathVariable String to,
+			@PathVariable BigDecimal quantity) {
+
+		CurrencyConversionBean response = proxy.retrieveExchangeValue(from, to);
+
+		logger.info("{}", response);
+		
+		return new CurrencyConversionBean(response.getId(), from, to, response.getConversionMultiple(), quantity,
+				quantity.multiply(response.getConversionMultiple()), response.getPort());
+	}
+	
 }

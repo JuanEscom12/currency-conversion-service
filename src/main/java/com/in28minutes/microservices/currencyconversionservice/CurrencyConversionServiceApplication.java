@@ -28,5 +28,9 @@ public class CurrencyConversionServiceApplication {
 		System.out.println("********");
 	}
 
+	public void testOne() {
+		System.out.println("********");
+	}
+
 
 }
