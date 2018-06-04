@@ -51,5 +51,17 @@ public class CurrencyConversionController {
 		return new CurrencyConversionBean(response.getId(), from, to, response.getConversionMultiple(), quantity,
 				quantity.multiply(response.getConversionMultiple()), response.getPort());
 	}
+	
+	public CurrencyConversionBean testTree(@PathVariable String from, @PathVariable String to,
+			@PathVariable BigDecimal quantity) {
+
+		CurrencyConversionBean responIIse = proxy.retrieveExchangeValue(from, to);
+
+		
+		logger.info("{}", responIIse);
+		
+		return new CurrencyConversionBean(responIIse.getId(), from, to, responIIse.getConversionMultiple(), quantity,
+				quantity.multiply(responIIse.getConversionMultiple()), responIIse.getPort());
+	}
 
 }
