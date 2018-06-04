@@ -12,6 +12,9 @@ public class CurrencyConversionBean {
 	private int port;
 	private int testOne;
 	private int testTwo;
+	private int testTree;
+	private int testFour;
+
 
 	public CurrencyConversionBean() {
 
@@ -101,5 +104,20 @@ public class CurrencyConversionBean {
 		this.testTwo = testTwo;
 	}
 	
+	public int getTestTree() {
+		return testTree;
+	}
+
+	public void setTestTree(int testTree) {
+		this.testTree = testTree;
+	}
+
+	public int getTestFour() {
+		return testFour;
+	}
+
+	public void setTestFour(int testFour) {
+		this.testFour = testFour;
+	}
 	
 }
